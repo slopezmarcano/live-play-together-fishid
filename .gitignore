@@ -5,3 +5,8 @@ outputs/pdfs/predator_prey_probability.pdf
 
 outputs/pdfs/tracking_counts.pdf
 outputs/pdfs/abundance_through_time.pdf
+outputs/video_material/abundance_video.mp4
+outputs/video_material/predation_videos.mp4
+outputs/video_material/tracking_video.mp4
+data/wrdataset2.csv
+.gitignore
