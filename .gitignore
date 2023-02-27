@@ -11,3 +11,4 @@ outputs/video_material/tracking_video.mp4
 data/wrdataset2.csv
 .gitignore
 scripts/004_detection_heatmap_time.R
+outputs/video_material
