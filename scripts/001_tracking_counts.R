@@ -12,16 +12,14 @@
 library(tidyverse) #data wrangling - data viz
 library(ggthemes) #ggplot2 themes
 #library(patchwork)
+library(arrow)
 library(ggtext) #add and modify text to ggpplot
 library(showtext) #fonts
 font_add_google("Lato")
 showtext_auto()
 
 #-- READ TRACKING DATA--#
-tracking_data <- read_csv('https://www.dropbox.com/s/3zqqr5qjair49gb/wrdataset2.csv?dl=1') #from SLM's PhD
-
-#-- TRACKER COUNTS --#
-count_tracker_per_site <- tracking_data %>%
+count_tracker_per_site <- read_parquet("data/converted_parquet/output_file.parquet") %>% #useful resources:https://hbs-rcs.github.io/large_data_in_R/
     filter(tracker_length > 200) %>%
     group_by(species, site) %>%
     count() %>%

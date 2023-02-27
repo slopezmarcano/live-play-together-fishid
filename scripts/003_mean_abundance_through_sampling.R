@@ -21,9 +21,7 @@ showtext_auto()
 
 
 #-- READ TRACKING DATA--#
-tracking_data <- read_csv('https://www.dropbox.com/s/3zqqr5qjair49gb/wrdataset2.csv?dl=1') #from SLM's PhD
-
-count_abundance <- tracking_data %>%
+count_abundance <- read_parquet("data/converted_parquet/output_file.parquet") %>% #useful resources:https://hbs-rcs.github.io/large_data_in_R/
     group_by(time,tide, site, species) %>%
     count() #%>%
     #filter(species =='Herring'|
