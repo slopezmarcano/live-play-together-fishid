@@ -12,7 +12,7 @@ logo_path = "outputs/video_material/FishID_Logo_V7_SL.png"
 # Define function to add logo to video frames
 def add_logo_to_frame(frame, logo):
     # Resize logo to a width of 100 pixels
-    logo = cv2.resize(logo, (100, int(logo.shape[0] * 100 / logo.shape[1])))
+    logo = cv2.resize(logo, (350, int(logo.shape[0] * 350 / logo.shape[1])))
     
     # Convert logo to RGB if it has an alpha channel
     if logo.shape[2] == 4:
